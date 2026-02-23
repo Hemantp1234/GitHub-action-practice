@@ -22,4 +22,12 @@ jobs:
       - name: This step will fail
         run: |
           echo "I am about to run a fake command..."
+
+      - name: Try to print the secret
+        env:
+          MY_KEY: ${{ secrets.MY_SUPER_SECRET_KEY }}
+        run: |
+          echo "I am going to try and print the secret below:"
+          echo "The secret key is: $MY_KEY"
+          echo "Notice how GitHub masks it with asterisks!"
         
