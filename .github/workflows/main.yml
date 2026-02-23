@@ -1,6 +1,9 @@
 name: Hands-On Practice
 
-on: [push] # The trigger: runs every time you push code
+on: 
+   push:
+     paths:
+        - 'src/**' # The trigger: runs every time you push code
 
 jobs:
   build:
