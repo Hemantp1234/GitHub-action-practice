@@ -19,4 +19,4 @@ jobs:
       - name: This step will fail
         run: |
           echo "I am about to run a fake command..."
-          this-is-not-a-command  # This will cause an error
+        
